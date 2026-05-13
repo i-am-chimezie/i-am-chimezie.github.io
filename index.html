@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chimezie P. Nwoke — Full Stack Developer</title>
+    <link rel="icon" type="image/png" href="favicon.png">   
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
@@ -77,7 +78,7 @@
         .logo {
             font-weight: 700;
             font-size: 0.85rem;
-            text-transform: 
+            text-transform: uppercase;
             letter-spacing: 0.15em;
         }
 
@@ -207,7 +208,7 @@
             font-weight: 700;
         }
 
-        /* LARGER PHOTO FRAME WITH BLACK & WHITE FILTER */
+        /* BIGGER PHOTO FRAME - optimized size */
         .photo-strip {
             display: flex;
             flex-direction: column;
@@ -216,8 +217,8 @@
         }
 
         .photo-frame {
-            width: 560px;
-            height: 620px;
+            width: 420px;
+            height: 520px;
             border: 2px solid var(--border);
             overflow: hidden;
             position: relative;
@@ -230,7 +231,7 @@
             box-shadow: 0 0 20px rgba(219, 184, 107, 0.15);
         }
 
-        /* BLACK & WHITE / MONOTONE FILTER - no image editing needed */
+        /* BLACK & WHITE / MONOTONE FILTER */
         .photo-frame img {
             width: 100%;
             height: 100%;
@@ -239,7 +240,7 @@
             transition: filter 0.4s ease, transform 0.4s ease;
         }
 
-        /* Optional: remove B&W on hover to reveal original color */
+        /* Shows color on hover */
         .photo-frame:hover img {
             filter: grayscale(0%) contrast(100%);
             transform: scale(1.03);
@@ -662,6 +663,13 @@
             100% { transform: translate(0); }
         }
 
+        @media (max-width: 1100px) {
+            .photo-frame {
+                width: 360px;
+                height: 450px;
+            }
+        }
+
         @media (max-width: 900px) {
             .hero-inner {
                 grid-template-columns: 1fr;
@@ -673,8 +681,8 @@
             }
             
             .photo-frame {
-                width: 220px;
-                height: 280px;
+                width: 320px;
+                height: 400px;
             }
         }
 
@@ -690,6 +698,11 @@
             .hero-meta {
                 flex-direction: column;
                 gap: 1.5rem;
+            }
+            
+            .photo-frame {
+                width: 280px;
+                height: 350px;
             }
         }
 
@@ -754,11 +767,11 @@
                 </div>
             </div>
 
-            <!-- PHOTO FRAME - BLACK & WHITE VIA CSS (no image editing needed) -->
+            <!-- PHOTO FRAME - BIGGER SIZE -->
             <div class="photo-strip">
                 <div class="photo-frame">
-                    <!-- Replace the src with your actual photo path -->
-                    <img src="myphoto.jpg" alt="chimezie portfolio">                </div>
+                    <img src="myphoto.jpg" alt="Chimezie P. Nwoke">
+                </div>
                 <div class="photo-label">CHIMEZIE P. NWOKE / 001</div>
             </div>
         </div>
