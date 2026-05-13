@@ -207,7 +207,7 @@
             font-weight: 700;
         }
 
-        /* LARGER PHOTO FRAME */
+        /* LARGER PHOTO FRAME WITH BLACK & WHITE FILTER */
         .photo-strip {
             display: flex;
             flex-direction: column;
@@ -230,38 +230,19 @@
             box-shadow: 0 0 20px rgba(219, 184, 107, 0.15);
         }
 
+        /* BLACK & WHITE / MONOTONE FILTER - no image editing needed */
         .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(30%) contrast(1.05);
+            filter: grayscale(100%) contrast(105%) brightness(100%);
             transition: filter 0.4s ease, transform 0.4s ease;
         }
 
+        /* Optional: remove B&W on hover to reveal original color */
         .photo-frame:hover img {
-            filter: grayscale(0%) contrast(1);
+            filter: grayscale(0%) contrast(100%);
             transform: scale(1.03);
-        }
-
-        /* Placeholder styling - replace with your actual image */
-        .photo-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            color: var(--dim);
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            text-align: center;
-        }
-
-        .photo-placeholder svg {
-            opacity: 0.5;
         }
 
         .photo-label {
@@ -773,11 +754,11 @@
                 </div>
             </div>
 
-            <!-- PHOTO FRAME - REPLACE the image src with your actual photo -->
+            <!-- PHOTO FRAME - BLACK & WHITE VIA CSS (no image editing needed) -->
             <div class="photo-strip">
                 <div class="photo-frame">
-                    <img src="https://placehold.co/400x500/1a1a1a/666?text=YOUR+PHOTO+HERE" alt="Chimezie P. Nwoke">
-                </div>
+                    <!-- Replace the src with your actual photo path -->
+                    <img src="myphoto.jpg" alt="chimezie portfolio">                </div>
                 <div class="photo-label">CHIMEZIE P. NWOKE / 001</div>
             </div>
         </div>
