@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chimezie P. Nwoke — Full Stack Developer</title>
-    <link rel="icon" type="image/png" href="favicon.png">   
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
@@ -208,7 +207,7 @@
             font-weight: 700;
         }
 
-        /* BIGGER PHOTO FRAME - optimized size */
+        /* BIGGER PHOTO FRAME WITH PROPER CONTAINMENT */
         .photo-strip {
             display: flex;
             flex-direction: column;
@@ -224,6 +223,9 @@
             position: relative;
             background: #1a1a1a;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .photo-frame:hover {
@@ -231,19 +233,19 @@
             box-shadow: 0 0 20px rgba(219, 184, 107, 0.15);
         }
 
-        /* BLACK & WHITE / MONOTONE FILTER */
+        /* IMAGE PROPERLY CONTAINED - NO OVERFLOW */
         .photo-frame img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             filter: grayscale(100%) contrast(105%) brightness(100%);
             transition: filter 0.4s ease, transform 0.4s ease;
         }
 
-        /* Shows color on hover */
+        /* Shows color on hover with NO overflow */
         .photo-frame:hover img {
             filter: grayscale(0%) contrast(100%);
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         .photo-label {
@@ -767,7 +769,7 @@
                 </div>
             </div>
 
-            <!-- PHOTO FRAME - BIGGER SIZE -->
+            <!-- PHOTO FRAME - IMAGE PROPERLY CONTAINED -->
             <div class="photo-strip">
                 <div class="photo-frame">
                     <img src="myphoto.jpg" alt="Chimezie P. Nwoke">
